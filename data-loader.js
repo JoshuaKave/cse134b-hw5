@@ -1,7 +1,5 @@
 (function() {
-    const JSONBIN_BIN_ID = '69328c08d0ea881f401426c7';
-    const JSONBIN_API_KEY = '$2a$10$ijcHpPjL41apgI8PrAfaG.pnuxBAMAReZ/muVlyANrS6DBR1ZQyU2';
-    const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}/latest`;
+    const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/69328c08d0ea881f401426c7/latest';
 
     const LOCAL_PROJECTS_KEY = 'portfolio-projects';
     const LOCAL_EXPERIENCE_KEY = 'portfolio-experience';
@@ -148,12 +146,7 @@
         const experienceContainer = document.getElementById('experience-container');
 
         try {
-            const response = await fetch(JSONBIN_URL, {
-                method: 'GET',
-                headers: {
-                    'X-Access-Key': JSONBIN_API_KEY
-                }
-            });
+            const response = await fetch(JSONBIN_URL);
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
