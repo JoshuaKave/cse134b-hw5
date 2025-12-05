@@ -27,31 +27,31 @@ class ProjectCard extends HTMLElement {
         const progress = this.getAttribute('progress');
 
         this.innerHTML = `
-            <article class="project-card">
+            <article>
                 <h2>${title}</h2>
                 ${imgSrc ? `
-                    <picture class="project-card__image">
+                    <picture>
                         ${imgSrcWebp ? `<source srcset="${imgSrcWebp}" media="(min-width: 501px)" type="image/webp">` : ''}
                         ${imgSrcSmallWebp ? `<source srcset="${imgSrcSmallWebp}" media="(max-width: 500px)" type="image/webp">` : ''}
                         ${imgSrc ? `<source srcset="${imgSrc}" media="(min-width: 501px)">` : ''}
                         <img src="${imgSrcSmall}" alt="${imgAlt}" loading="lazy">
                     </picture>
                 ` : ''}
-                ${description ? `<p class="project-card__description">${description}</p>` : ''}
+                ${description ? `<p>${description}</p>` : ''}
                 ${keywords ? `
-                    <div class="project-card__keywords">
-                        ${keywords.split(',').map(k => `<span class="project-card__keyword">${k.trim()}</span>`).join('')}
+                    <div class="keywords">
+                        ${keywords.split(',').map(k => `<span>${k.trim()}</span>`).join('')}
                     </div>
                 ` : ''}
-                ${date ? `<p class="project-card__date">${date}</p>` : ''}
+                ${date ? `<p class="date">${date}</p>` : ''}
                 ${progress !== null && progress !== '' ? `
-                    <div class="project-card__progress">
+                    <div class="progress">
                         <span>Progress:</span>
                         <progress value="${progress}" max="100">${progress}%</progress>
                         <span>${progress}%</span>
                     </div>
                 ` : ''}
-                ${link ? `<a href="${link}" class="project-card__link">${linkText}</a>` : ''}
+                ${link ? `<a href="${link}">${linkText}</a>` : ''}
             </article>
         `;
     }
