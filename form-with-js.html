@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form-no-js</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/favicon.ico">
+        <style>
+            .flash {
+                animation: flash-field 0.2s ease-in-out 2;
+            }
+
+            @keyframes flash-field {
+                0% { box-shadow: 0 0 0 0 rgba(255, 68, 51, 0.7); }
+                50% { box-shadow: 0 0 0 3px rgba(255, 68, 51, 0.3); }
+                100% { box-shadow: 0 0 0 0 rgba(255, 68, 51, 0); }
+            }
+            .char-counter {
+                margin-top: 0.35rem;
+                align-self: flex-end;
+                font-size: 0.9rem;
+                color: var(--color-bark, #5c4033);
+                transition: color 150ms, font-weight 150ms;
+            }
+            .char-counter.warning {
+                color: #ff4433;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="https://www.httpbin.org/post" method="post" id="contact-form">
+            <label for="name">Name<span class="required">*</span></label>
+            <input type="text" id="name" name="name" minlength="3" maxlength="75" pattern="^[\p{L} .'\-]+$" required>
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" name="email" minlength="5" maxlength="254" required>
+            <label for="phone">Phone Number (no dashes)<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" minlength="4" maxlength="20" pattern="^\d+$" required>
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" maxlength="500"></textarea>
+            <p id="comments-counter" class="char-counter"></p>
+            <input name="possible_bot" type="hidden" value="true">
+            <input name="form-errors" type="hidden" id="form-errors" value="[]">
+            <button type="submit">Submit!</button>
+            <output class="error-message" for="contact-form"></output>
+            <output class="info-message" for="contact-form"></output>
+        </form>
+
+        <script src="script.js"></script>
+    </body>
+</html>
