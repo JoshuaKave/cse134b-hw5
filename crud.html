@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manage Data</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/favicon.ico">
+    </head>
+
+    <body>
+        <noscript>
+            <p><strong>Note: </strong>This page requires JavaScript to manage data.</p>
+        </noscript>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle">Night</button>
+            </nav>
+        </header>
+
+        <main>
+            <hr>
+            <h1>Manage Portfolio Data</h1>
+            
+            <article>
+                <label for="data-type" hidden>Data Type</label>
+                <select id="data-type">
+                    <option value="projects">Projects</option>
+                    <option value="experience">Experience</option>
+                </select>
+
+                <section>
+                    <h2 id="form-title">Create New Item</h2>
+                    
+                    <form id="item-form">
+                        <input type="hidden" id="item-index" value="-1">
+                        
+                        <fieldset>
+                            <label for="item-title">Title *</label>
+                            <input type="text" id="item-title" name="title" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="item-img-src">Image URL</label>
+                            <input type="url" id="item-img-src" name="imgSrc" placeholder="https://example.com/image.png">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="item-img-alt">Image Alt Text</label>
+                            <input type="text" id="item-img-alt" name="imgAlt">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="item-description">Description</label>
+                            <textarea id="item-description" name="description"></textarea>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="item-keywords">Keywords (comma-separated)</label>
+                            <input type="text" id="item-keywords" name="keywords" placeholder="JavaScript, React, Node.js">
+                        </fieldset>
+
+                        <fieldset id="progress-group">
+                            <label for="item-progress">Progress (0-100)</label>
+                            <input type="number" id="item-progress" name="progress" min="0" max="100">
+                        </fieldset>
+
+                        <fieldset id="link-group">
+                            <label for="item-link">Link URL</label>
+                            <input type="text" id="item-link" name="link" placeholder="projects/project1.html">
+                        </fieldset>
+
+                        <fieldset id="link-text-group">
+                            <label for="item-link-text">Link Text</label>
+                            <input type="text" id="item-link-text" name="linkText" value="View Project">
+                        </fieldset>
+
+                        <fieldset id="date-group">
+                            <label for="item-date">Date</label>
+                            <input type="text" id="item-date" name="date" placeholder="June 2024 - August 2024">
+                        </fieldset>
+
+                        <footer>
+                            <button type="submit" id="btn-submit" data-action="create">Create</button>
+                            <button type="button" id="btn-cancel">Cancel</button>
+                            <button type="button" id="btn-delete" data-action="delete" hidden>Delete</button>
+                        </footer>
+                    </form>
+                </section>
+
+                <aside id="items-list">
+                    <h3>Current Items</h3>
+                    <ul id="items-container">
+                    </ul>
+                </aside>
+            </article>
+        </main>
+
+        <footer>
+            <p>Manage your portfolio data | <a href="projects.html">View Projects</a> | <a href="experience.html">View Experience</a></p>
+        </footer>
+
+        <script src="crud.js"></script>
+        <script src="theme-toggle.js"></script>
+    </body>
+</html>
