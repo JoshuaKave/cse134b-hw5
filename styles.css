@@ -639,6 +639,18 @@ iframe{
     }
 }
 
+.data-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.data-controls button {
+    min-width: 120px;
+}
+
 @media print {
   header, footer, button {
     display: none;
