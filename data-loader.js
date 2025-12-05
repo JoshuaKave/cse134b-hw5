@@ -181,6 +181,8 @@
     function init() {
         initializeLocalStorage();
 
+        loadLocal();
+
         const loadLocalBtn = document.getElementById('load-local');
         const loadRemoteBtn = document.getElementById('load-remote');
 
