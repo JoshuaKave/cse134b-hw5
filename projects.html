@@ -24,50 +24,54 @@
         <main>
             <hr>
             <h1>Projects</h1>
-            <div class="grid">
-                <article>
-                    <h2>Craft AI</h2>
-                    <picture class="logo-image">
-                        <source srcset="images/craftAI_icon.webp" media="(min-width: 501px)" type="image/webp">
-                        <source srcset="images/craftAI_icon_small.webp" media="(max-width: 500px)" type="image/webp">
-                        <source srcset="images/craftAI_icon.jpg" media="(min-width: 501px)">
-                        <img src="images/craftAI_icon_small.jpg" alt="CraftAI Logo">
-                    </picture>
-                    <p>AI trained crafting bot for Path of Exile</p>
-                    <p>Project completion: <progress value="15" max="100">15</progress></p>
-                    <a href="projects/project1.html">View Project</a>
-                </article>
+            <div class="card-grid">
+                <project-card
+                    title="Craft AI"
+                    img-src="images/craftAI_icon.png"
+                    img-src-small="images/craftAI_icon_small.png"
+                    img-src-webp="images/craftAI_icon.webp"
+                    img-src-small-webp="images/craftAI_icon_small.webp"
+                    img-alt="CraftAI Logo - An AI brain icon representing machine learning"
+                    description="AI-powered crafting bot for Path of Exile that uses reinforcement learning to discover optimal crafting strategies and automate complex item creation."
+                    keywords="Python, Machine Learning, Reinforcement Learning, OpenAI Gymnasium"
+                    progress="15"
+                    link="projects/project1.html"
+                    link-text="View Project">
+                </project-card>
 
-                <article>
-                    <h2>Portfolio Website</h2>
-                    <picture class="logo-image">
-                        <source srcset="images/profile_icon.webp" media="(min-width: 501px)" type="image/webp">
-                        <source srcset="images/profile_icon_small.webp" media="(max-width: 500px)" type="image/webp">
-                        <source srcset="images/profile_icon.jpg" media="(min-width: 501px)">
-                        <img src="images/profile_icon_small.jpg" alt="Portfolio Website Logo" style="width:30%; height:auto;">
-                    </picture>
-                    <p>Fast and Clean Portfolio Website</p>
-                    <p>Project completion: <progress value="50" max="100">50</progress></p>
-                    <a href="projects/project2.html">View Project</a>
-                </article>
+                <project-card
+                    title="Portfolio Website"
+                    img-src="images/profile_icon.png"
+                    img-src-small="images/profile_icon_small.png"
+                    img-src-webp="images/profile_icon.webp"
+                    img-src-small-webp="images/profile_icon_small.webp"
+                    img-alt="Portfolio Website Icon - A profile icon representing personal branding"
+                    description="A responsive and accessible portfolio website built with semantic HTML, CSS custom properties, and minimal JavaScript for optimal performance."
+                    keywords="HTML, CSS, JavaScript, Web Accessibility, Responsive Design"
+                    progress="50"
+                    link="projects/project2.html"
+                    link-text="View Project">
+                </project-card>
 
-                <article>
-                    <h2>Path of Investing</h2>
-                    <picture class="logo-image">
-                        <source srcset="images/invest_logo.webp" media="(min-width: 501px)" type="image/webp">
-                        <source srcset="images/invest_logo_small.webp" media="(max-width: 500px)" type="image/webp">
-                        <source srcset="images/invest_logo.jpg" media="(min-width: 501px)">
-                        <img src="images/invest_logo_small.jpg" alt="Path of Investing Logo">
-                    </picture>
-                    <p>Investment website for the Path of Exile Economy</p>
-                    <p>Project completion: <progress value="70" max="100">70</progress></p>
-                    <a href="projects/project3.html">View Project</a>
-                </article>
+                <project-card
+                    title="Path of Investing"
+                    img-src="images/invest_logo.png"
+                    img-src-small="images/invest_logo_small.png"
+                    img-src-webp="images/invest_logo.webp"
+                    img-src-small-webp="images/invest_logo_small.webp"
+                    img-alt="Path of Investing Logo - A chart icon representing market analysis"
+                    description="Investment tracking platform for the Path of Exile in-game economy, featuring real-time price monitoring, portfolio management, and investment strategy comparison tools."
+                    keywords="JavaScript, API Integration, Data Visualization, Web Scraping"
+                    progress="70"
+                    link="projects/project3.html"
+                    link-text="View Project">
+                </project-card>
             </div>    
         </main>
         <footer>
             More work coming soon...
         </footer>
+        <script src="project-card.js"></script>
         <script src="theme-toggle.js"></script>
     </body>
 </html>

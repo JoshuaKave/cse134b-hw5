@@ -23,59 +23,60 @@
         <main>
             <hr>
             <h1>Experience</h1>
-            <div class="grid">
-                <article>
-                    <h2>ServiceNow</h2>
-                    <picture class="logo-image">
-                        <source srcset="images/coding_picture.webp" media="(min-width: 501px)">
-                        <source srcset="images/coding_picture_small.webp" media="(max-width: 500px)">
-                        <source srcset="images/coding_picture.jpg" media="(min-width: 501px)">
-                        <img src="images/coding_picture_small.jpg" alt="ServiceNow">
-                    </picture>
-                    <p>Fullstack engineer intern</p>
-                    <time datetime="2025-06">June 2025</time> &darr; <time datetime="2025-08">August 2025</time>
-                </article>
+            <div class="card-grid">
+                <project-card
+                    title="ServiceNow - Fullstack Engineer"
+                    img-src="images/coding_picture.jpg"
+                    img-src-small="images/coding_picture_small.jpg"
+                    img-src-webp="images/coding_picture.webp"
+                    img-src-small-webp="images/coding_picture_small.webp"
+                    img-alt="Software engineering workspace representing fullstack development"
+                    description="Fullstack engineer intern working on enterprise service management solutions, building scalable web applications with modern frameworks and cloud technologies."
+                    keywords="JavaScript, Seismic, Node.js, Cloud Services"
+                    date="June 2025 - August 2025">
+                </project-card>
 
-                <article>
-                    <h2>ServiceNow</h2>
-                        <picture class="logo-image">
-                        <source srcset="images/coding_picture.webp" media="(min-width: 501px)">
-                        <source srcset="images/coding_picture_small.webp" media="(max-width: 500px)">
-                        <source srcset="images/coding_picture.jpg" media="(min-width: 501px)">
-                        <img src="images/coding_picture_small.jpg" alt="ServiceNow">
-                    </picture>
-                    <p>DevOps engineer intern</p>
-                    <time datetime="2025-06">June 2024</time> &darr; <time datetime="2025-08">August 2024</time>
-                </article>
+                <project-card
+                    title="ServiceNow - DevOps Engineer"
+                    img-src="images/coding_picture.jpg"
+                    img-src-small="images/coding_picture_small.jpg"
+                    img-src-webp="images/coding_picture.webp"
+                    img-src-small-webp="images/coding_picture_small.webp"
+                    img-alt="DevOps engineering workspace with CI/CD pipelines"
+                    description="DevOps engineer intern focused on automating deployment pipelines, infrastructure as code, and improving continuous integration workflows for enterprise applications."
+                    keywords="CI/CD, Docker, Kubernetes, Infrastructure"
+                    date="June 2024 - August 2024">
+                </project-card>
 
-                <article>
-                    <h2>Computer Science Tutor</h2>
-                    <picture class="logo-image">
-                        <source srcset="images/tutor.webp" media="(min-width: 501px)">
-                        <source srcset="images/tutor_small.webp" media="(max-width: 500px)">
-                        <source srcset="images/tutor.png" media="(min-width: 501px)">
-                        <img src="images/tutor_small.png" alt="Computer Science Tutor">
-                    </picture>
-                    <p>Computer Science Tutor for CSE 11, CSE 8a, CSE 29, and CSE 190</p>
-                    <time datetime="2023-09">September 2023</time> &darr; <time datetime="2025-11">November 2025</time>
-                </article>
+                <project-card
+                    title="Computer Science Tutor"
+                    img-src="images/tutor.png"
+                    img-src-small="images/tutor_small.png"
+                    img-src-webp="images/tutor.webp"
+                    img-src-small-webp="images/tutor_small.webp"
+                    img-alt="Tutoring session icon representing educational support"
+                    description="Computer Science Tutor helping students master foundational and advanced programming concepts in CSE 11, CSE 8a, CSE 29, and CSE 190 courses."
+                    keywords="Java, C, Python, Teaching, Mentorship"
+                    date="September 2023 - Present">
+                </project-card>
 
-                <article>
-                    <h2>Resident Assistant</h2>
-                    <picture class="logo-image">
-                        <source srcset="images/ra.webp" media="(min-width: 501px)">
-                        <source srcset="images/ra_small.webp" media="(max-width: 500px)">
-                        <source srcset="images/ra.jpg" media="(min-width: 501px)">
-                        <img src="images/ra_small.jpg" alt="Resident Assistant">
-                    </picture>
-                    <p>Resident Assistant for Eleanor Roosevelt College </p>
-                    <time datetime="2024-09">September 2024</time> &darr; <time datetime="2025-11">November 2025</time>
-                </article>
+                <project-card
+                    title="Resident Assistant"
+                    img-src="images/ra.png"
+                    img-src-small="images/ra_small.png"
+                    img-src-webp="images/ra.webp"
+                    img-src-small-webp="images/ra_small.webp"
+                    img-alt="Community building icon representing residential life"
+                    description="Resident Assistant at Eleanor Roosevelt College, fostering an inclusive community environment, organizing events, and providing support to student residents."
+                    keywords="Leadership, Community Building, Event Planning, Conflict Resolution"
+                    date="September 2024 - Present">
+                </project-card>
             </div>
         </main>
         <footer>
             <p><cite><a href="https://pixabay.com/service/license-summary/" style="text-decoration: none;" target="noopener">Images from Pixabay</a></cite></p>
         </footer>
+        <script src="project-card.js"></script>
         <script src="theme-toggle.js"></script>
     </body>
 </html>
