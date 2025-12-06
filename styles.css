@@ -614,6 +614,15 @@ iframe{
     to { transform: translateX(0); }
 }
 
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-moss, #4a7c59);
+    outline-offset: 2px;
+}
+
 @media (max-width: 500px) {
     header{
         nav {
